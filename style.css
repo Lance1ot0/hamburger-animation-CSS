@@ -1,0 +1,174 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: #002E3D;
+    font-family: 'PT Sans', sans-serif;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #f1f1f1;
+    text-align: center;
+    margin: 80px 0px;
+}
+.container {
+    height: auto;
+    width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+@media screen and (max-width: 920px) {
+    .container {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+.box {
+    height: 200px;
+    width: 200px;
+    background: #E76B74;
+    margin: 0px 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.contLine {
+    width: 60px;
+    height: 42px;
+    cursor: pointer;
+    position: relative;
+}
+.lines {
+    width: 100%;
+    height: 6px;
+    border-radius: 5px;
+    background: #000;
+    position: absolute;
+    transition: all .5s ease-in-out;
+}
+
+.lines:nth-child(1){
+    top: 0px;
+}
+.lines:nth-child(2){
+    top: 18px;
+}
+.lines:nth-child(3){
+    top: 36px;
+}
+
+/* Animation 1 */
+
+.btn1.active .lines:nth-child(1){
+    transform: translateY(18px);
+}
+
+.btn1.active .lines:nth-child(2){
+    opacity: 0;
+}
+
+.btn1.active .lines:nth-child(3){
+    transform: translateY(-18px);
+}
+
+/* Animation 2 */
+
+.btn2.active .lines:nth-child(1){
+    top: 18px;
+    transform: rotate(135deg);
+}
+
+.btn2.active .lines:nth-child(2){
+    opacity: 0;
+}
+
+.btn2.active .lines:nth-child(3){
+    top: 18px;
+    transform: rotate(-135deg);
+}
+
+/* Animation 3 */
+
+.contLine.btn3{
+    transition: all 0.5s ease-in-out;
+}
+
+.contLine.btn3.active{
+    width: 35px;
+}
+
+.btn3.active .lines:nth-child(1){
+    transform: rotate(90deg) translateX(18px) translateY(18px);
+}
+
+.btn3.active .lines:nth-child(2){
+    transform: rotate(90deg);
+}
+
+.btn3.active .lines:nth-child(3){
+    transform: rotate(90deg) translateX(-18px) translateY(-18px);
+}
+
+/* Animation 4 */
+
+.contLine.btn4{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn4.active .lines:nth-child(1){
+    transition: all 0.4s ease-in-out;
+    width: 35%;
+    transform: translateY(6px);
+}
+
+.btn4.active .lines:nth-child(2){
+    transition: all 0.4s 0.15s ease-in-out;
+    width: 35%;
+}
+
+.btn4.active .lines:nth-child(3){
+    transition: all 0.4s 0.3s ease-in-out;
+    transform: translateY(-6px);
+    width: 35%;
+}
+
+/* Animation 5 */
+
+.btn5.active .lines:nth-child(1){
+    transform: rotate(-55deg) translateX(-18px) translateY(2px);
+    width: 85%;
+}
+
+.btn5.active .lines:nth-child(2){
+    transform: rotate(55deg) translateX(10px) translateY(-16px);
+    width: 85%;
+}
+
+.btn5 .circle{
+    top: -2px;
+    right: 25px;
+    opacity: 0%;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background: #000;
+    position: absolute;
+    transition: all .3s ease-in; 
+}
+
+.btn5.active .circle{
+    top: 18px;
+    opacity: 100%;
+    transition: all .35s .2s ease-in;
+}
+
+/* Animation 6 */
