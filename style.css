@@ -172,3 +172,72 @@ h1 {
 }
 
 /* Animation 6 */
+
+.rightLine {
+    opacity: 0%;
+    width: 0%;
+    height: 6px;
+    border-radius: 5px;
+    background: #1B2021;
+    position: absolute;
+    transition: all .5s .5s ease-in-out;
+    transform: rotate(90deg) translateY(-28px) translateX(18px);
+}
+
+.btn6 .rightLine{
+    transition: all .5s ease-in-out; 
+}
+
+.btn6.active .rightLine{
+    opacity: 100%;
+    width: 100%;
+    transition: all .5s .5s ease-in-out; 
+}
+
+.crossLine {
+    opacity: 0;
+    width: 70%;
+    height: 6px;
+    border-radius: 5px;
+    background: #1B2021;
+    position: absolute;
+    transform: rotate(135deg);
+    top: 18px;
+    left: 9px;
+}
+
+#crossLeft{
+    transform: rotate(135deg);
+}
+
+#crossRight{
+    transform: rotate(-135deg);
+}
+
+.btn6 .crossLine{
+    transition: all .3s ease-in-out;
+}
+
+.btn6.active .crossLine{
+    opacity: 100%;
+    transition: all .5s .9s ease-in-out;
+}
+
+.btn6 .lines{
+    transition: all .5s .5s ease-in-out;
+}
+
+.btn6.active .lines:nth-child(1){
+    transform: translateY(-10px);
+    transition: all .5s ease-in-out; 
+}
+
+.btn6.active .lines:nth-child(2){
+    transform: rotate(90deg) translateY(28px);
+    transition: all .5s ease-in-out; 
+}
+
+.btn6.active .lines:nth-child(3){
+    transform: translateY(10px);
+    transition: all .5s ease-in-out; 
+}
