@@ -108,7 +108,8 @@ h1 {
 }
 
 .btn3.active .lines:nth-child(2){
-    transform: rotate(90deg);
+    width: 20%;
+    transform: rotate(90deg) translateY(-14px);
 }
 
 .btn3.active .lines:nth-child(3){
@@ -240,4 +241,19 @@ h1 {
 .btn6.active .lines:nth-child(3){
     transform: translateY(10px);
     transition: all .5s ease-in-out; 
+}
+
+/* Animation 7 */
+
+.btn7.active .lines{
+    transform: rotate(145deg) translateX(-8px) translateY(-8px);
+    width: 60%;
+}
+
+/* Animation 8 */
+
+.btn8.active .lines{
+    height: 10px;
+    width: 10px;
+    transform: rotate(90deg) translateY(-28px);
 }
