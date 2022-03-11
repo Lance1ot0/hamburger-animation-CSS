@@ -356,6 +356,17 @@ h1 {
 
 /* Animation 11 */
 
+.btn11 .lines:nth-child(1){
+    transform: translateY(0px);
+    transition: opacity .4s .4s ease-in-out, transform .4s .4s ease-in-out, width .4s .8s ease-in-out;
+}
+
+.btn11 .lines:nth-child(3){
+    top: 36px;
+    right: 0px;
+    transition: opacity .4s .4s ease-in-out, top .4s .4s ease-in-out, width .4s .8s ease-in-out;
+}
+
 .btn11.active .lines:nth-child(1){
     width: 10px;
     transform: translateY(18px);
@@ -369,7 +380,6 @@ h1 {
     transition: transform .4s .8s ease-in-out , width .4s .8s ease-in-out;
 }
 
-
 .btn11.active .lines:nth-child(3){
     width: 10px;
     top: 18px;
@@ -377,3 +387,5 @@ h1 {
     opacity: 0;
     transition: width .4s ease-in-out, top .4s .4s ease-in-out, opacity .4s .5s ease-in-out;
 }
+
+/* Animation 12 */
