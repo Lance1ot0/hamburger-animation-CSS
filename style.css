@@ -389,3 +389,24 @@ h1 {
 }
 
 /* Animation 12 */
+
+.btn12 {
+    transform: rotate(0deg);
+    transition: transform .6s ease-in-out;
+}
+
+.btn12.active .lines:nth-child(1){
+    transform: translateY(18px);
+    transition:  transform .4s ease-in-out;
+}
+
+.btn12.active .lines:nth-child(3){
+    top: 18px;
+    transform: rotate(90deg);
+    transition:  top .4s .4s ease-in-out, transform .8s .4s ease-in-out;
+}
+
+.btn12.active{
+    transform: rotate(135deg);
+    transition: transform .8s .4s ease-in-out;
+}
